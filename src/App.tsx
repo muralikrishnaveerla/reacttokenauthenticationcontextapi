@@ -61,7 +61,6 @@ function App() {
               path="/reacttokenauthenticationcontextapi/logout"
               element={<Logout />}
             />
-            <Route path="*" element={<div>Page Not Found</div>} />
           </Routes>
         </div>
       </ContextApi>
