@@ -35,7 +35,7 @@ const Header = () => {
         <ul style={{ listStyleType: "none", display: "flex", margin: 0 }}>
           {auth?.accessToken ? (
             <li>
-              <Link to="#" onClick={logout}>
+              <Link to="/reacttokenauthenticationcontextapi" onClick={logout}>
                 Logout
               </Link>
             </li>
