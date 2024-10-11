@@ -1,0 +1,18 @@
+.card {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-body {
+    flex-grow: 1;
+  }
+  
+  .card img {
+    max-height: 200px; 
+    object-fit: cover;
+  }
+  
+  .card img[src*="dummy-image.jpg"] {
+    background-color: #f0f0f0; 
+  }
+  
