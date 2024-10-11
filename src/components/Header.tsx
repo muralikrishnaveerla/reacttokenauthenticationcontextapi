@@ -5,7 +5,9 @@ import { UseAuth } from "./ContextApi";
 const Header = () => {
   const { logout }: any = UseAuth();
   const auth: any = UseAuth();
-
+  const Alert = () => {
+    alert("Please Login");
+  };
   return (
     <div
       style={{ background: "#ddd" }}
@@ -17,17 +19,35 @@ const Header = () => {
             <Link to="/reacttokenauthenticationcontextapi/home">Home</Link>
           </li>
           <li className="me-3">
-            <Link to="/reacttokenauthenticationcontextapi/products">
-              Products
-            </Link>
-          </li>
-          <li className="me-3">
-            <Link to="/reacttokenauthenticationcontextapi/about">About</Link>
+            {auth?.accessToken ? (
+              <Link to="/reacttokenauthenticationcontextapi/products">
+                Products
+              </Link>
+            ) : (
+              <Link to="" onClick={() => Alert()}>
+                Products
+              </Link>
+            )}
           </li>
           <li>
-            <Link to="/reacttokenauthenticationcontextapi/contact">
-              Contact
-            </Link>
+            {auth?.accessToken ? (
+              <Link to="/reacttokenauthenticationcontextapi/about">About</Link>
+            ) : (
+              <Link to="/" onClick={() => Alert()}>
+                About
+              </Link>
+            )}
+          </li>
+          <li>
+            {auth?.accessToken ? (
+              <Link to="/reacttokenauthenticationcontextapi/contact">
+                Contact
+              </Link>
+            ) : (
+              <Link to="/" onClick={() => Alert()}>
+                Contact
+              </Link>
+            )}
           </li>
         </ul>
       </div>
@@ -35,7 +55,7 @@ const Header = () => {
         <ul style={{ listStyleType: "none", display: "flex", margin: 0 }}>
           {auth?.accessToken ? (
             <li>
-              <Link to="/reacttokenauthenticationcontextapi" onClick={logout}>
+              <Link to="" onClick={logout}>
                 Logout
               </Link>
             </li>
