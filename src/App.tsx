@@ -19,11 +19,17 @@ function App() {
         <Header />
         <div style={{ margin: "20px 20px 0 20px" }}>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/home" element={<Home />} />
+            <Route
+              path="/reacttokenauthenticationcontextapi"
+              element={<Home />}
+            />
+            <Route
+              path="/reacttokenauthenticationcontextapi/home"
+              element={<Home />}
+            />
 
             <Route
-              path="/products"
+              path="/reacttokenauthenticationcontextapi/products"
               element={
                 <ProtectedRoute>
                   <ProductList />
@@ -32,7 +38,7 @@ function App() {
             />
 
             <Route
-              path="/about"
+              path="/reacttokenauthenticationcontextapi/about"
               element={
                 <ProtectedRoute>
                   <About />
@@ -40,15 +46,21 @@ function App() {
               }
             />
             <Route
-              path="/contact"
+              path="/reacttokenauthenticationcontextapi/contact"
               element={
                 <ProtectedRoute>
                   <Contact />
                 </ProtectedRoute>
               }
             />
-            <Route path="/login" element={<Login />} />
-            <Route path="/logout" element={<Logout />} />
+            <Route
+              path="/reacttokenauthenticationcontextapi/login"
+              element={<Login />}
+            />
+            <Route
+              path="/reacttokenauthenticationcontextapi/logout"
+              element={<Logout />}
+            />
             <Route path="*" element={<div>Page Not Found</div>} />
           </Routes>
         </div>

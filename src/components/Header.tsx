@@ -14,16 +14,20 @@ const Header = () => {
       <div>
         <ul style={{ listStyleType: "none", display: "flex", margin: 0 }}>
           <li className="me-3">
-            <Link to="/home">Home</Link>
+            <Link to="/reacttokenauthenticationcontextapi/home">Home</Link>
           </li>
           <li className="me-3">
-            <Link to="/products">Products</Link>
+            <Link to="/reacttokenauthenticationcontextapi/products">
+              Products
+            </Link>
           </li>
           <li className="me-3">
-            <Link to="/about">About</Link>
+            <Link to="/reacttokenauthenticationcontextapi/about">About</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/reacttokenauthenticationcontextapi/contact">
+              Contact
+            </Link>
           </li>
         </ul>
       </div>
@@ -37,7 +41,7 @@ const Header = () => {
             </li>
           ) : (
             <li>
-              <Link to="/login">Login</Link>
+              <Link to="/reacttokenauthenticationcontextapi/login">Login</Link>
             </li>
           )}
         </ul>
