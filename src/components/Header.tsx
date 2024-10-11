@@ -24,7 +24,10 @@ const Header = () => {
                 Products
               </Link>
             ) : (
-              <Link to="" onClick={() => Alert()}>
+              <Link
+                to="/reacttokenauthenticationcontextapi/login"
+                onClick={() => Alert()}
+              >
                 Products
               </Link>
             )}
@@ -33,7 +36,10 @@ const Header = () => {
             {auth?.accessToken ? (
               <Link to="/reacttokenauthenticationcontextapi/about">About</Link>
             ) : (
-              <Link to="/" onClick={() => Alert()}>
+              <Link
+                to="/reacttokenauthenticationcontextapi/login"
+                onClick={() => Alert()}
+              >
                 About
               </Link>
             )}
@@ -44,7 +50,10 @@ const Header = () => {
                 Contact
               </Link>
             ) : (
-              <Link to="/" onClick={() => Alert()}>
+              <Link
+                to="/reacttokenauthenticationcontextapi/login"
+                onClick={() => Alert()}
+              >
                 Contact
               </Link>
             )}
