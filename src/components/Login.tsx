@@ -75,7 +75,9 @@ const Login = () => {
                 </button>
               </form>
               <div className="my-4">
-                <Link to="/home">Click for Login Details</Link>
+                <Link to="/reacttokenauthenticationcontextapi/home">
+                  Click for Login Details
+                </Link>
               </div>
             </div>
           </div>

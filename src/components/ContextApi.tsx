@@ -50,7 +50,7 @@ export const ContextApi = ({ children }: Prop) => {
       localStorage.setItem("accessToken", access_token);
       localStorage.setItem("refreshToken", refresh_token);
       localStorage.setItem("user", email);
-      navigate("/home");
+      navigate("/reacttokenauthenticationcontextapi/home");
     } catch (error) {
       console.error("Login failed", error);
     }
@@ -65,7 +65,7 @@ export const ContextApi = ({ children }: Prop) => {
     localStorage.removeItem("refreshToken");
     localStorage.removeItem("user");
 
-    navigate("/login");
+    navigate("/reacttokenauthenticationcontextapi/login");
   };
 
   return (
