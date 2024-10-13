@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/reacttokenauthenticationcontextapi/static/css/main.02bec515.css",
-    "main.js": "/reacttokenauthenticationcontextapi/static/js/main.74684d6a.js",
+    "main.js": "/reacttokenauthenticationcontextapi/static/js/main.8e165913.js",
     "static/js/453.a6477c4a.chunk.js": "/reacttokenauthenticationcontextapi/static/js/453.a6477c4a.chunk.js",
     "static/media/revicons.eot": "/reacttokenauthenticationcontextapi/static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/revicons.ttf": "/reacttokenauthenticationcontextapi/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/reacttokenauthenticationcontextapi/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/reacttokenauthenticationcontextapi/index.html",
     "main.02bec515.css.map": "/reacttokenauthenticationcontextapi/static/css/main.02bec515.css.map",
-    "main.74684d6a.js.map": "/reacttokenauthenticationcontextapi/static/js/main.74684d6a.js.map",
+    "main.8e165913.js.map": "/reacttokenauthenticationcontextapi/static/js/main.8e165913.js.map",
     "453.a6477c4a.chunk.js.map": "/reacttokenauthenticationcontextapi/static/js/453.a6477c4a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.02bec515.css",
-    "static/js/main.74684d6a.js"
+    "static/js/main.8e165913.js"
   ]
 }
