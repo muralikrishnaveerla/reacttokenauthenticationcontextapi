@@ -8,7 +8,7 @@ const InactivityLogout: React.FC = () => {
   const { logout }: any = UseAuth();
   const navigate = useNavigate();
   const timeoutIdRef = useRef<NodeJS.Timeout | null>(null);
-  const inactivityLimit = 30 * 1000; // 1 minute in milliseconds
+  const inactivityLimit = 1 * 60 * 1000; // 1 minute in milliseconds
   const [showModal, setShowModal] = useState(false); // State to control modal visibility
 
   // Function to check if the token is expired
@@ -96,7 +96,7 @@ const InactivityLogout: React.FC = () => {
               <button
                 type="button"
                 className="close"
-                onClick={() => setShowModal(false)}
+                onClick={confirmLogout}
                 aria-label="Close"
               >
                 <span aria-hidden="true">&times;</span>
@@ -104,25 +104,25 @@ const InactivityLogout: React.FC = () => {
             </div>
             <div className="modal-body">
               <p>
-                Your session is about to expire due to inactivity. Would you
-                like to extend your session?
+                Your session is about to expire due to inactivity. Please log in
+                again.
               </p>
             </div>
             <div className="modal-footer">
               <button
                 type="button"
-                className="btn btn-secondary"
+                className="btn btn-outline-dark"
                 onClick={confirmLogout}
               >
-                Logout
+                OK
               </button>
-              <button
+              {/* <button
                 type="button"
                 className="btn btn-primary"
                 onClick={handleExtendSession}
               >
                 Extend Session
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
