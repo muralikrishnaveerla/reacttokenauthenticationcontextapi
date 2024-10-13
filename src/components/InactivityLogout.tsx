@@ -2,11 +2,13 @@ import React, { useEffect, useCallback, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 import { JwtPayload } from "jwt-decode";
+import { UseAuth } from "./ContextApi";
 
 const InactivityLogout: React.FC = () => {
+  const { logout }: any = UseAuth();
   const navigate = useNavigate();
   const timeoutIdRef = useRef<NodeJS.Timeout | null>(null);
-  const inactivityLimit = 1 * 60 * 1000; // 1 minute in milliseconds
+  const inactivityLimit = 30 * 1000; // 1 minute in milliseconds
   const [showModal, setShowModal] = useState(false); // State to control modal visibility
 
   // Function to check if the token is expired
@@ -22,8 +24,7 @@ const InactivityLogout: React.FC = () => {
 
   // Logout and redirect function
   const handleLogout = (): void => {
-    localStorage.removeItem("accessToken");
-    navigate("/reacttokenauthenticationcontextapi/login");
+    logout();
   };
 
   // Reset the inactivity timer on user activity
