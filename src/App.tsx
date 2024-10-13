@@ -11,11 +11,13 @@ import Login from "./components/Login";
 import ProtectedRoute from "./ProtectedRouteProps ";
 import Logout from "./components/Logout";
 import ProductList from "./components/products/ProductList";
+import InactivityLogout from "./components/InactivityLogout";
 
 function App() {
   return (
     <div className="App">
       <ContextApi>
+        <InactivityLogout /> Render InactivityLogout here
         <Header />
         <div style={{ margin: "20px 20px 0 20px" }}>
           <Routes>
@@ -27,7 +29,6 @@ function App() {
               path="/reacttokenauthenticationcontextapi/home"
               element={<Home />}
             />
-
             <Route
               path="/reacttokenauthenticationcontextapi/products"
               element={
@@ -36,7 +37,6 @@ function App() {
                 </ProtectedRoute>
               }
             />
-
             <Route
               path="/reacttokenauthenticationcontextapi/about"
               element={
