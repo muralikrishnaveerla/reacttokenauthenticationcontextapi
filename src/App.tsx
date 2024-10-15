@@ -12,6 +12,8 @@ import ProtectedRoute from "./ProtectedRouteProps ";
 import Logout from "./components/Logout";
 import ProductList from "./components/products/ProductList";
 import InactivityLogout from "./components/InactivityLogout";
+import ProductsTable from "./components/products/ProductsTable";
+import Todo from "./components/todo/Todo";
 
 function App() {
   return (
@@ -34,6 +36,22 @@ function App() {
               element={
                 <ProtectedRoute>
                   <ProductList />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/reacttokenauthenticationcontextapi/productstable"
+              element={
+                <ProtectedRoute>
+                  <ProductsTable />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/reacttokenauthenticationcontextapi/todo"
+              element={
+                <ProtectedRoute>
+                  <Todo />
                 </ProtectedRoute>
               }
             />
