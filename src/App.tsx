@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <ContextApi>
-        <InactivityLogout />
+        {/* <InactivityLogout /> */}
         <Header />
         <div style={{ margin: "20px 20px 0 20px" }}>
           <Routes>
